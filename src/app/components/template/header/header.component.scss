@@ -1,0 +1,145 @@
+.header{
+  width: 100%;
+  height: 56px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0px 2px 6px #A8A8A829;
+  margin-bottom: 4px;
+
+  .navbar{
+    height: 100%;
+    width: 100%;
+    max-width: 1366px;
+    padding: 9px 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__pages{
+      width: 100%;
+      height: calc(100% + 18px);
+      display: flex;
+      align-items: center;
+
+      a{
+        height: 100%;
+        margin-right: 48px;
+        border-bottom: 4px solid #725172;
+        line-height: 56px;
+      }
+    }
+  }
+
+  &__logo{
+    height: 38px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 60px;
+  }
+  a{
+    color: #1F1F1F;
+    text-decoration: none;
+  }
+
+  .user{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-left: 1px solid #A8A8A829;
+
+    &__logo{
+      margin: 0 15px;
+      border: 2px solid #725172;
+      border-radius: 9px;
+    }
+  }
+
+  &__mobile,
+  &__mobile-nav{
+    display: none;
+  }
+
+  @media screen and (max-width: 768px){
+    .navbar{
+      display: none;
+    }
+    &__mobile{
+      display: flex;
+      align-items: center;
+    }
+    &__mobile-nav[style*=visible]{
+      left: 0;
+    }
+    &__logo{
+      margin-right: 0;
+      height: 40px;
+    }
+    .toggle-icon{
+      position: absolute;
+      left: 16px;
+      padding: 0;
+      border: none;
+    }
+    &__mobile-nav{
+      display: block;
+      overflow-x: hidden;
+      position: absolute;
+      left: -200px;
+      top: 0;
+      background-color: #725172;
+      height: 100%;
+      z-index: 2;
+      transition: all ease .15s;
+      width: 200px;
+      padding: 20px 0;
+      color: #FFF;
+      a{
+        color: #FFF;
+      }
+
+      div{
+        margin-bottom: 15px;
+      }
+      a{
+        width: 100%;
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 20px;
+      }
+
+      .close-modal{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}

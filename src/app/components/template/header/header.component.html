@@ -1,0 +1,45 @@
+<header class="header tk-proxima-nova">
+  <nav class="navbar">
+    <a routerLink="">
+      <img class="header__logo" src="assets/img/logo.png" alt="logo" />
+    </a>
+
+    <div class="navbar__pages">
+      <a routerLink="{{ link_inicio }}">
+        Início
+      </a>
+      <a routerLink="{{ link_produtos }}">
+        Meus Produtos
+      </a>
+    </div>
+
+    <div class="user">
+      <img class="user__logo" width="36" height="36" src="assets/img/logo.png" alt="usuario imagem" />
+      <span class="">{{ userName }}</span>
+    </div>
+  </nav>
+
+  <mat-drawer #drawer class="header__mobile-nav">
+    <span class="close-modal" (click)="drawer.toggle()">
+      x
+    </span>
+    <div class="user">
+      <img class="user__logo" width="36" height="36" src="assets/img/logo.png" alt="usuario imagem" />
+      <span class="">{{ userName }}</span>
+    </div>
+    <a routerLink="{{ link_inicio }}" (click)="drawer.toggle()">
+      Início
+    </a>
+    <a routerLink="{{ link_produtos }}" (click)="drawer.toggle()">
+      Meus Produtos
+    </a>
+  </mat-drawer>
+  <div class="header__mobile">
+
+    <mat-icon class="toggle-icon" mat-raised-button (click)="drawer.toggle()">menu</mat-icon>
+
+    <a routerLink="">
+      <img class="header__logo" src="assets/img/logo@2x.png" alt="logo mobile" />
+    </a>
+  </div>
+</header>
