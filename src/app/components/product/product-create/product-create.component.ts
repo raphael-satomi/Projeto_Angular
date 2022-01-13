@@ -16,17 +16,17 @@ export class ProductCreateComponent implements OnInit {
     price: null
   }
 
-  constructor( 
+  constructor(
     private productService: ProductService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    
+
   }
 
   createProduct():void{
-    this.productService.create( this.product ).subscribe(() => {
+    this.productService.create( this.product ).subscribe(res => {
       this.productService.showMessage("Produto Criado");
       this.router.navigate(['/products'])
     })

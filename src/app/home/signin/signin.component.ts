@@ -1,3 +1,4 @@
+import { ProductService } from './../../components/product/product.service';
 import { PlatformDetectorService } from './../../core/platform-detector/platform-detector.service';
 import { AuthService } from './../../core/auth/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
@@ -5,7 +6,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  templateUrl: './signin.component.html'
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.components.scss']
 })
 export class SignInComponent implements OnInit
 {
@@ -16,7 +18,8 @@ export class SignInComponent implements OnInit
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private platformDetectorService: PlatformDetectorService
+    private platformDetectorService: PlatformDetectorService,
+    private productService: ProductService
   ){}
 
   ngOnInit(): void {
@@ -40,7 +43,7 @@ export class SignInComponent implements OnInit
           this.loginForm.reset();
           this.platformDetectorService.isPlatformBrowser() &&
             this.userNameInput.nativeElement.focus();
-          alert('Invalid user name or password')
+          this.productService.showMessage("Nome e/ou Senha incorreta!");
         }
       )
   }

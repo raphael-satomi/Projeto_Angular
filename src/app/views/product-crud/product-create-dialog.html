@@ -1,0 +1,20 @@
+<mat-dialog-content class="mat-typography">
+  <h2 mat-dialog-title>Novo Produto</h2>
+  <form>
+      <input  placeholder="Nome"
+              [(ngModel)]="product.name" name="name"
+              required
+      />
+      <textarea placeholder="Descrição"></textarea>
+      <input  placeholder="Preço (R$)"
+              [(ngModel)]="product.price" name="price"
+              required
+      />
+      <input type="date" placeholder="Data"/>
+      <input type="file" (change)="onFileSelected($event)"/>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="createProduct()">Salvar</button>
+</mat-dialog-actions>

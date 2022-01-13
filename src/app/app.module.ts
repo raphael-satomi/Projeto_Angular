@@ -1,3 +1,4 @@
+import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './components/template/header/header.component';
 import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
@@ -18,7 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductCrudComponent, AppDialogProductCreate } from './views/product-crud/product-crud.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
@@ -61,7 +62,8 @@ registerLocaleData(localePt);
     ProductUpdateComponent,
     ProductDeleteComponent,
     SignInComponent,
-    MainNavComponent
+    MainNavComponent,
+    AppDialogProductCreate
   ],
   imports: [
     BrowserModule,
@@ -87,7 +89,8 @@ registerLocaleData(localePt);
     CoreModule,
     HomeModule,
     LayoutModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [{
     provide: LOCALE_ID,

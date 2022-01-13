@@ -28,12 +28,12 @@ export class HeaderComponent implements OnInit{
 
   logout()
   {
-    console.log("logout");
     this.userService.logout();
     this.router.navigate(['']);
   }
 
   ngOnInit(): void {
+
   }
 
   get title(): string {

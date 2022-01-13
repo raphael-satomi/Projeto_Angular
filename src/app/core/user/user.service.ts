@@ -8,7 +8,7 @@ import { User } from "./user";
 export class UserService
 {
   private userSubject = new BehaviorSubject<User | null>(null);
-  private userName: string = '';
+  private userName: string = null;
 
   constructor(private tokenService: TokenService)
   {

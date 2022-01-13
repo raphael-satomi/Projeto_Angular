@@ -1,11 +1,12 @@
 <div class="main">
   <div class="main__content">
     <div class="main__content-title">
-      <h1>Meus Produtos.</h1>
+      <h1 class="title">Meus Produtos.</h1>
       <button (click)="navigateToProductCreate()"
       >
-        Adicionar Produto
-        </button>
+      Adicionar Produto
+      </button>
+      <button mat-button (click)="openDialog()">Adicionar Produto</button>
     </div>
 
     <app-product-read></app-product-read>
