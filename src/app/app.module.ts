@@ -1,3 +1,4 @@
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './components/template/header/header.component';
 import { HomeModule } from './home/home.module';
@@ -30,8 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ProductReadComponent } from './components/product/product-read/product-read.component';
-import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { ProductReadComponent, AppDialogProductDelete } from './components/product/product-read/product-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -39,10 +39,10 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData, CommonModule } from '@angular/common';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 registerLocaleData(localePt);
@@ -58,12 +58,12 @@ registerLocaleData(localePt);
     ForDirective,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
     SignInComponent,
     MainNavComponent,
-    AppDialogProductCreate
+    AppDialogProductCreate,
+    AppDialogProductDelete
   ],
   imports: [
     BrowserModule,
@@ -90,6 +90,7 @@ registerLocaleData(localePt);
     HomeModule,
     LayoutModule,
     MatIconModule,
+    MatMenuModule,
     MatDialogModule
   ],
   providers: [{

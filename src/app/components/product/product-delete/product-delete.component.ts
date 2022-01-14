@@ -6,7 +6,7 @@ import { ProductService } from './../product.service';
 
 @Component({
   selector: 'app-product-delete',
-  templateUrl: './product-delete.component.html',
+  templateUrl: './product-delete-dialog.html',
   styleUrls: ['./product-delete.component.scss']
 })
 export class ProductDeleteComponent implements OnInit {
@@ -39,7 +39,7 @@ export class ProductDeleteComponent implements OnInit {
       }
     )
   }
-  
+
   cancelProduct():void {
     this.router.navigate(['products'])
   }

@@ -50,6 +50,7 @@ export class ProductCrudComponent implements OnInit {
 @Component({
   selector: 'app-dialog-product-create',
   templateUrl: './product-create-dialog.html',
+  styleUrls: ['./product-create-dialog.scss']
 })
 export class AppDialogProductCreate {
   selectedFile = null;

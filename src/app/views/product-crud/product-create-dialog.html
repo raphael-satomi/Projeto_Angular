@@ -1,5 +1,14 @@
 <mat-dialog-content class="mat-typography">
-  <h2 mat-dialog-title>Novo Produto</h2>
+  <div class="title-form">
+    <h2 mat-dialog-title>Novo Produto</h2>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>
+        <i class="material-icons">
+          closeicon
+        </i>
+      </button>
+    </mat-dialog-actions>
+  </div>
   <form>
       <input  placeholder="Nome"
               [(ngModel)]="product.name" name="name"
@@ -11,9 +20,11 @@
               required
       />
       <input type="date" placeholder="Data"/>
+      <input type="text" placeholder="Categorias ( separe-as por vírgulas )" required />
       <input type="file" (change)="onFileSelected($event)"/>
   </form>
 </mat-dialog-content>
+
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancelar</button>
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="createProduct()">Salvar</button>

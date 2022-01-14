@@ -1,0 +1,32 @@
+mat-dialog-content {
+  overflow: hidden;
+
+  .title-form {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    mat-dialog-actions {
+      margin: 0;
+      min-height: auto;
+      padding: 0;
+      width: fit-content;
+
+      i {
+        width: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  span {
+    font-size: 18px;
+    margin: 40px 0;
+  }
+
+}

@@ -1,0 +1,18 @@
+<mat-dialog-content class="mat-typography">
+  <div class="title-form">
+    <h2 mat-dialog-title>Remover Produto.</h2>
+    <mat-dialog-actions>
+      <i mat-button mat-dialog-close class="material-icons">
+        closeicon
+      </i>
+    </mat-dialog-actions>
+  </div>
+  <span>
+    Você realmente deseja excluir esse produto?
+  </span>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="deleteProduct()">Confimar</button>
+</mat-dialog-actions>
